@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赵瑞君的个人主页 | Game Enthusiast & QA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Math Challenge Modal -->
+    <div id="math-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title chinese-font">安全验证</h2>
+            <p class="modal-desc">你要证明你不是傻X才能继续访问！</p>
+            <div class="math-problem">
+                <span id="num1"></span> + <span id="num2"></span> = ?
+            </div>
+            <input type="number" id="math-answer" placeholder="输入答案" class="math-input">
+            <button id="submit-math" class="btn btn-primary">验证</button>
+            <p id="error-msg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">赵瑞君</a>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#games">游戏生涯</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content hidden-el">
+                <h1 class="chinese-font">你好，我是 <span class="highlight">赵瑞君</span></h1>
+                <p class="typing-effect">游戏爱好者 | 网易游戏 - 大话QA部</p>
+                <div class="hero-btns">
+                    <a href="#games" class="btn btn-primary">查看游戏经历</a>
+                    <a href="#contact" class="btn btn-secondary">联系我</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Clouds -->
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title hidden-el">关于我</h2>
+            <div class="about-content hidden-el">
+                <div class="about-text">
+                    <p>我是一名热情的游戏爱好者，目前就职于<strong>网易游戏 (NetEase Games)</strong>，在<strong>大话QA部</strong>担任质量保证工作。</p>
+                    <p>作为一名资深玩家和QA，我对游戏品质有着极致的追求。从经典的端游到热门的手游，我享受探索游戏世界的每一个角落，并致力于为玩家提供最优质的游戏体验。</p>
+                    <div class="skills">
+                        <span class="skill-tag">游戏测试</span>
+                        <span class="skill-tag">QA</span>
+                        <span class="skill-tag">自动化测试</span>
+                        <span class="skill-tag special">大话西游</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">游戏数据分析</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games/Career Section -->
+    <section id="games" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title hidden-el">游戏生涯 & 工作</h2>
+            <div class="projects-grid">
+                <!-- Card 1: Work -->
+                <div class="project-card hidden-el">
+                    <div class="project-info">
+                        <h3><i class="fas fa-building"></i> 网易游戏 - 大话QA部</h3>
+                        <p>目前就职于网易游戏大话QA部。负责保障《大话西游》系列产品的游戏质量，参与核心玩法的测试与质量把控。</p>
+                        <div class="project-tags">
+                            <span>职业经历</span>
+                            <span>游戏QA</span>
+                            <span>质量保证</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Game 1 -->
+                <div class="project-card featured hidden-el" style="border-top-color: #d4af37;">
+                    <div class="project-info">
+                        <h3 class="chinese-font"><i class="fas fa-dragon"></i> 大话西游</h3>
+                        <p>经典国风回合制网游。这不仅是我的工作重心，也是我投入了大量时间与热情的游戏世界。</p>
+                        <div class="project-tags">
+                            <span>回合制</span>
+                            <span>MMORPG</span>
+                            <span>经典国风</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Game 2 & 3 -->
+                <div class="project-card hidden-el">
+                    <div class="project-info">
+                        <h3><i class="fas fa-gamepad"></i> 竞技手游热爱者</h3>
+                        <p>热衷于快节奏的竞技游戏。在《巅峰极速》中体验赛车竞速的快感，在《决战平安京》中享受MOBA对战的策略博弈。</p>
+                        <div class="project-tags">
+                            <span>巅峰极速</span>
+                            <span>决战平安京</span>
+                            <span>移动竞技</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title hidden-el">联系我</h2>
+            <div class="contact-content hidden-el">
+                <p>想交流游戏心得或者技术问题？欢迎联系我！</p>
+                
+                <div class="contact-info-card">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>12345678</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>666@163.com</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="mailto:666@163.com"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fab fa-steam"></i></a>
+                </div>
+                
+                <form class="contact-form">
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
+                    <textarea placeholder="留言内容" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 赵瑞君. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
