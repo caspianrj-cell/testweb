@@ -6,7 +6,7 @@
     <title>赵大宝的个人主页 | Game Enthusiast & QA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Long+Cang&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Math Challenge Modal -->
@@ -23,6 +23,22 @@
         </div>
     </div>
 
+    <!-- Music Player Widget -->
+    <div class="music-player">
+        <div class="music-disc" id="music-disc">
+            <div class="music-cover"></div>
+        </div>
+        <div class="music-controls">
+            <span class="music-title">一生所爱 - 大话西游</span>
+            <button id="music-toggle" class="music-btn"><i class="fas fa-play"></i></button>
+        </div>
+        <!-- NetEase Cloud Music Link (Classic Version) -->
+        <audio id="bgm" loop>
+            <source src="https://music.163.com/song/media/outer/url?id=25906124.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -30,6 +46,7 @@
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于我</a></li>
+                <li><a href="#story">成长故事</a></li>
                 <li><a href="#games">游戏生涯</a></li>
                 <li><a href="#contact">联系方式</a></li>
             </ul>
@@ -47,7 +64,7 @@
                 <h1 class="chinese-font">你好，我是 <span class="highlight">赵大宝</span></h1>
                 <p class="typing-effect">游戏爱好者 | 网易游戏 - 大话QA部</p>
                 <div class="hero-btns">
-                    <a href="#games" class="btn btn-primary">查看游戏经历</a>
+                    <a href="#story" class="btn btn-primary">我的故事</a>
                     <a href="#contact" class="btn btn-secondary">联系我</a>
                 </div>
             </div>
@@ -76,6 +93,60 @@
                         <span class="skill-tag">游戏数据分析</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section (New) -->
+    <section id="story" class="section bg-paper">
+        <div class="container">
+            <h2 class="section-title hidden-el">赵大宝的求学之路</h2>
+            <div class="story-timeline">
+                
+                <div class="story-item hidden-el">
+                    <div class="story-icon"><i class="fas fa-baby"></i></div>
+                    <div class="story-content">
+                        <span class="story-date">童年时光</span>
+                        <h3>长安城外的游戏梦</h3>
+                        <p>出生在一个普通的小镇，小时候的赵大宝最快乐的时光就是看着邻居家的大哥哥玩《大话西游》。那时候，屏幕里那个色彩斑斓的长安城，就是他眼中最神奇的世界。虽然看不懂复杂的数值，但那颗“想做游戏”的种子，已经在心里悄悄发芽。</p>
+                    </div>
+                </div>
+
+                <div class="story-item hidden-el">
+                    <div class="story-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="story-content">
+                        <span class="story-date">中学时代</span>
+                        <h3>数学与“傻X”验证码</h3>
+                        <p>中学时期的赵大宝偏科严重，尤其是数学让他头大。每次看到复杂的公式，他都觉得自己像个“傻X”。但他不服输，为了搞懂游戏的伤害计算公式，他硬着头皮啃数学书。这段经历也让他明白：<strong>想要通关，就必须解决眼前的难题。</strong>这也是后来网站“防傻X验证”的灵感来源。</p>
+                    </div>
+                </div>
+
+                <div class="story-item hidden-el">
+                    <div class="story-icon"><i class="fas fa-university"></i></div>
+                    <div class="story-content">
+                        <span class="story-date">大学生涯</span>
+                        <h3>代码与情义</h3>
+                        <p>考入大学计算机系后，赵大宝终于拥有了自己的电脑。白天他努力学习代码，晚上则和帮派兄弟们在《大话》里并肩作战。他开始尝试用 Python 写一些简单的数据分析工具来辅助帮战指挥。这段时间，他不仅收获了技术，更懂得了什么是“兄弟情义”。</p>
+                    </div>
+                </div>
+
+                <div class="story-item hidden-el">
+                    <div class="story-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <div class="story-content">
+                        <span class="story-date">2025 - 至今</span>
+                        <h3>圆梦网易</h3>
+                        <p>毕业求职，赵大宝的目标只有一个：网易游戏。经过三轮严苛的面试，凭着对游戏深刻的理解和扎实的技术功底，他终于拿到了 Offer。如今，作为大话QA部的一员，他每天都在守护着那个不仅属于他，也属于亿万玩家的“西游梦”。</p>
+                    </div>
+                </div>
+                <div class="story-item hidden-el">
+                    <div class="story-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <div class="story-content">
+                        <span class="story-date">番外篇</span>
+                        <h3>养猪场运营掌门人</h3>
+                        <p>除了游戏，赵大宝在公司还意外接到了“养猪场运营项目”。他用游戏数值分析的思维去优化饲料配比、用测试用例来管理养殖流程，还写脚本实时监控猪舍环境数据。短短一个季度，出栏率提高了 27%，公司年会还专门给他颁了“最会玩也最会养”大奖。</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

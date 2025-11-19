@@ -1,4 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // === MUSIC PLAYER LOGIC ===
+    const musicBtn = document.getElementById('music-toggle');
+    const bgm = document.getElementById('bgm');
+    const musicDisc = document.getElementById('music-disc');
+    const musicIcon = musicBtn.querySelector('i');
+    const musicTitle = document.querySelector('.music-title');
+
+    let isPlaying = false;
+
+    // Error Handling for Audio
+    bgm.addEventListener('error', (e) => {
+        console.error("Audio Error:", bgm.error);
+        musicTitle.textContent = "音乐加载失败";
+        musicTitle.style.color = "red";
+        alert("背景音乐加载失败，可能是因为版权限制或网络问题。\n建议您下载 '一生所爱.mp3' 到本地，并修改 index.html 中的音频路径。");
+    });
+
+    bgm.addEventListener('waiting', () => {
+        musicTitle.textContent = "缓冲中...";
+    });
+
+    bgm.addEventListener('canplay', () => {
+        if(!isPlaying) musicTitle.textContent = "一生所爱 - 点击播放";
+    });
+
+    bgm.addEventListener('play', () => {
+        musicTitle.textContent = "正在播放: 一生所爱";
+    });
+
+    musicBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            bgm.pause();
+            musicDisc.classList.remove('playing');
+            musicIcon.className = 'fas fa-play';
+        } else {
+            const playPromise = bgm.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Automatic playback started!
+                    musicDisc.classList.add('playing');
+                    musicIcon.className = 'fas fa-pause';
+                })
+                .catch(error => {
+                    console.log("Audio play failed:", error);
+                    musicDisc.classList.remove('playing');
+                    musicIcon.className = 'fas fa-play';
+                    isPlaying = false; 
+                    alert("无法播放音乐。请尝试：\n1. 检查网络连接\n2. 浏览器可能阻止了自动播放，请手动多次点击按钮\n3. 链接可能已失效");
+                });
+            }
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Set volume
+    bgm.volume = 0.5;
+
+
     // === MATH CHALLENGE LOGIC ===
     const mathModal = document.getElementById('math-modal');
     const num1El = document.getElementById('num1');
@@ -29,6 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = 'auto'; // Restore scrolling
                 // Start typing effect after modal closes
                 startTypingEffect();
+                
+                // Try to auto-play music (often blocked, but worth a try)
+                // bgm.play().catch(() => console.log("Autoplay blocked"));
+                
             }, 500);
         } else {
             // Wrong Answer
